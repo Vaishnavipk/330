@@ -1,0 +1,50 @@
+class Patient
+{ String Name;
+  String Uid;
+  int mobileNum;
+
+  Patient(String Name,String Uid,int mobileNum)
+	{ this.Name=name;
+      this.Uid=Uid;
+	  this.MobNum=MobNum;
+	}
+  static Patient search(Patient[] p,int keyMob )
+	{ Patient temp1=null;
+	  for(int i=0;i<p.length;i++)
+		{if(p[i].mobNum == keyMob)
+                 {temp=p[i];
+                  break;
+                 }
+		}
+          return temp;
+	}
+  
+  public static void main(String arg[])
+  { Patient[] P=new Patient[10];
+     P[0]=new Patient("Patient1", "Uid1", 6444);
+     P[1]=new Patient("Patient2", "Uid2", 6445);
+     P[2]=new Patient("Patient3", "Uid3", 6446);
+     P[3]=new Patient("Patient4", "Uid4", 6447);
+     P[4]=new Patient("Patient5", "Uid5", 6448);
+     P[5]=new Patient("Patient6", "Uid6", 6449);
+     P[6]=new Patient("Patient7", "Uid7", 6440);
+     P[7]=new Patient("Patient8", "Uid8", 6441);
+     P[8]=new Patient("Patient9", "Uid9", 6442);
+     P[9]=new Patient("Patient10", "Uid10", 6443);
+     
+     int keyMob=6449;
+     Patient PP=Patient.search(P, keyMob);
+     
+     if(PP==null)
+       System.out.println("no patient found");
+     else 
+     {System.out.println("patient found with following details");
+      System.out.println("name="+PP.Name);
+       System.out.println("uid="+PP.Uid);
+      System.out.println("name="+PP.mobileNum);
+     }
+     }
+     
+      
+  }
+}
