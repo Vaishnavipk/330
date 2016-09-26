@@ -1,0 +1,80 @@
+class User
+{	private int studentid;
+	String studentName;
+	String studentType;
+	static int studentId=0;
+User(String Name){ 
+            this.studentName=Name;
+			studentId++;
+			id=studentId;
+			}
+	User(String Name, String Type)
+	{
+	this.studentname=studentname;
+	this.studenttype=studenttype;
+	studentId++;
+	id=studentId;
+	}
+	int getId()
+	{
+	return studentid;
+	}
+	public String toString()
+	{
+	 return (id+":"+studentName+":"+studentType);
+	}
+	static User[] CreateUsers()
+	{
+		User[] U=new User[5];
+		U[0]=new User("abc","Admin");
+		U[0].id=20;
+		U[1]=new User("xyz","GUest");
+	    U[1].id=5;
+	    U[2]=new User("mmm","Guest");
+		U[2].id=3;
+		U[3]=new User("qwer","Guest");
+		U[3].id=8;
+		U[4]=new User("dsds","Guest");
+		U[4].studentid=1;
+		return U;
+	}
+	void printUsers(User[] U)
+	{
+		for(int i=0;i<U.length;i++)
+		{
+		System.out.println(U[i]);
+		
+		}
+	}
+	void sortUsers(User[] U)
+	{
+		User temp1=new User();
+		temp1=null;
+		for(int j=0;j<U.length;j++)
+		{
+		for(int a=1;a<=(U.length-1);a++)
+		{
+			if(U[a-1].id>U[a].id)	
+			{temp=U[a-1];
+				U[a-1]=u[a];	
+				U[a]=temp1;
+			}
+		}
+			
+		}		
+	}
+	public static void main(String[] args)
+	{
+		
+		System.out.println(u1);
+
+		User U2=new User("bbb", "normal");
+		User U=new User();    
+		User[] users=U.createUsers();
+		System.out.println("User before sorting");
+		U.printUsers(users);		
+		U.sortUsers(users);
+		System.out.println("User after sorting");
+		U.printUsers(users);
+	}	
+} 
