@@ -1,0 +1,48 @@
+class Shape
+{
+	double Dimension1;
+	double Dimension2;
+	Shape()
+	Shape(double Dimension1, double Dimension2)
+	{
+	this.Dimension1=Dimension2;
+	this.Dimension2=Dimension2;
+	}
+	double getArea()
+	{
+	return 0;
+	}
+	
+}
+class Rectangle extends Shape()
+
+	Rectangle();
+	Rectangle(double Dimension1, double Dimensionm2)
+	{
+	super(Dimension1,Dimension2);
+	}
+	double getArea();
+	{
+	return Dimension1*Dimension2;
+	}
+}
+class ShapeDemo
+{
+	public static void main(string[] args)
+	{
+		Shape s=new Shape();
+		Rectangle rect=new Rectangle(2,3);
+		System.out.println("area of the rectangle="+rect.getArea());
+		s=rect;
+		System.out.println("area of rectangle="+s.getArea());
+		
+		
+	}
+} 
+
+
+
+
+
+
+
